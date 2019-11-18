@@ -1,5 +1,6 @@
-package com.example.armutcasestudy
+package com.example.armutcasestudy.util
 
+import com.example.armutcasestudy.fragment.CardModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -12,5 +13,5 @@ interface APIService {
         "x-rapidapi-key: 2308a9b553mshca3389fa9f9e669p1a2722jsnc30adbeaa1f7",
         "Content-Type: application/json")
     @GET("search/{name}")
-    fun getCardList(@Path("name") k: String): Call<List<CardModel>>
+    fun getCardList(@Path("name") k: String): Call<MutableList<CardModel>>
 }

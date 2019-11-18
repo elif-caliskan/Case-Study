@@ -1,4 +1,4 @@
-package com.example.armutcasestudy
+package com.example.armutcasestudy.activity
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

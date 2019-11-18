@@ -1,4 +1,4 @@
-package com.example.armutcasestudy
+package com.example.armutcasestudy.util
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -25,7 +25,8 @@ class RetroClient private constructor() {
         val instance: RetroClient
             @Synchronized get() {
                 if (mInstance == null) {
-                    mInstance = RetroClient()
+                    mInstance =
+                        RetroClient()
                 }
                 return mInstance!!
             }

@@ -15,7 +15,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:id="@+id/search_view"
-            android:background="@android:color/white"/>
+            android:background="@android:color/white"
+            android:queryHint="Saron" />
     </LinearLayout>
     
     <androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_layout"
         android:layout_margin="12dp"
-        android:id="@+id/search_recyclerview"/>
+        android:id="@+id/search_recyclerview"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

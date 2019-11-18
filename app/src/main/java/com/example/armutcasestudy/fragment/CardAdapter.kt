@@ -1,4 +1,4 @@
-package com.example.armutcasestudy
+package com.example.armutcasestudy.fragment
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.armutcasestudy.R
+import java.lang.Math.max
+import java.lang.Math.min
 
 class CardAdapter(var dataSet: List<CardModel>, val itemClickListener: OnItemClickListener) :
     RecyclerView.Adapter<CardAdapter.ViewHolder>() {
@@ -42,7 +45,7 @@ class CardAdapter(var dataSet: List<CardModel>, val itemClickListener: OnItemCli
     }
 
     // Return the size of your dataset (invoked by the layout manager)
-    override fun getItemCount() = dataSet.size
+    override fun getItemCount() = min(dataSet.size, 10)
 
 }
 

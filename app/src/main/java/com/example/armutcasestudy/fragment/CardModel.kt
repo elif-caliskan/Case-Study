@@ -1,4 +1,4 @@
-package com.example.armutcasestudy
+package com.example.armutcasestudy.fragment
 
 import java.io.Serializable
 
@@ -9,5 +9,6 @@ class CardModel(
     val cost: String?,
     val playerClass: String?,
     val text: String?,
-    val imgUrl: String?
+    val imgUrl: String?,
+    val rarity: String?
 ) : Serializable
