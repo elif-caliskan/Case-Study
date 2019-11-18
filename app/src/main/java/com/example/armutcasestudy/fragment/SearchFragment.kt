@@ -64,7 +64,7 @@ class SearchFragment:Fragment(), OnItemClickListener {
 
     private fun initDataset(str:String) {
 
-        val call: Call<MutableList<CardModel>> = RetroClient.instance.apiService.getCardList(str)
+        val call: Call<MutableList<CardModel>> = RetroClient.instance.apiService.cardListSearch(str)
         dataset = mutableListOf()
         call.enqueue(object : Callback<MutableList<CardModel>> {
             override fun onResponse(call: Call<MutableList<CardModel>>, response: Response<MutableList<CardModel>>) {
