@@ -1,5 +1,6 @@
 package com.example.armutcasestudy.fragment
 
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.armutcasestudy.R
+import com.squareup.picasso.Picasso
 import java.lang.Math.max
 import java.lang.Math.min
 
@@ -21,7 +23,16 @@ class CardAdapter(var dataSet: List<CardModel>, val itemClickListener: OnItemCli
 
         fun bind(card: CardModel, clickListener: OnItemClickListener) {
             name.text = card.name
-            text.text = card.text
+            if(card.text!=null){
+                text.text = Html.fromHtml(card.text)
+            }
+
+            if(card.img!=null){
+                Picasso.get().load(card.img).into(image)
+            }
+            else{
+                image.setImageResource(R.drawable.ic_img_placeholder)
+            }
 
             itemView.setOnClickListener {
                 clickListener.onItemClicked(card)

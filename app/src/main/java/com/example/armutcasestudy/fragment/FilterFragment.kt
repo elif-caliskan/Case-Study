@@ -48,13 +48,11 @@ class FilterFragment:Fragment(), OnItemClickListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
-
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 initDataset(arr[position])
             }
 
         }
-
 
         recyclerView = rootView.findViewById(R.id.filter_recyclerview)
 
@@ -95,11 +93,15 @@ class FilterFragment:Fragment(), OnItemClickListener {
     override fun onItemClicked(card: CardModel) {
         //activity
         val intent = Intent(context, CardDetailActivity::class.java)
-        intent.putExtra("playerClass", card.playerClass)
-        intent.putExtra("rarity", card.rarity)
-        intent.putExtra("type", card.type)
-        intent.putExtra("cost", card.cost)
-        intent.putExtra("description", card.text)
+        intent.putExtra("PLAYERCLASS", card.playerClass)
+        intent.putExtra("RARITY", card.rarity)
+        intent.putExtra("TYPE", card.type)
+        intent.putExtra("COST", card.cost)
+        intent.putExtra("DESCRIPTION", card.text)
+        intent.putExtra("NAME", card.name)
+        intent.putExtra("HEALTH", card.health)
+        intent.putExtra("ATTACK", card.attack)
+        intent.putExtra("IMAGEURL", card.img)
         startActivity(intent)
     }
 }

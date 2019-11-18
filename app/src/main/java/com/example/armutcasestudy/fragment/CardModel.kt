@@ -9,6 +9,8 @@ class CardModel(
     val cost: String?,
     val playerClass: String?,
     val text: String?,
-    val imgUrl: String?,
+    val img: String?,
+    val health: String?,
+    val attack: String?,
     val rarity: String?
 ) : Serializable
